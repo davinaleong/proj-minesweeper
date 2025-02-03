@@ -13,10 +13,138 @@
 }
 
 :root {
+  /* Root Settings */
+  --clr-primary-50: theme("colors.slate.50");
+  --clr-primary-100: theme("colors.slate.100");
+  --clr-primary-200: theme("colors.slate.200");
+  --clr-primary-300: theme("colors.slate.300");
+  --clr-primary-400: theme("colors.slate.400");
+  --clr-primary-500: theme("colors.slate.500");
+  --clr-primary-600: theme("colors.slate.600");
+  --clr-primary-700: theme("colors.slate.700");
+  --clr-primary-800: theme("colors.slate.800");
+  --clr-primary-900: theme("colors.slate.900");
+  --clr-primary-950: theme("colors.slate.950");
+
+  --clr-secondary-50: theme("colors.blue.50");
+  --clr-secondary-100: theme("colors.blue.100");
+  --clr-secondary-200: theme("colors.blue.200");
+  --clr-secondary-300: theme("colors.blue.300");
+  --clr-secondary-400: theme("colors.blue.400");
+  --clr-secondary-500: theme("colors.blue.500");
+  --clr-secondary-600: theme("colors.blue.600");
+  --clr-secondary-700: theme("colors.blue.700");
+  --clr-secondary-800: theme("colors.blue.800");
+  --clr-secondary-900: theme("colors.blue.900");
+  --clr-secondary-950: theme("colors.blue.950");
+
+  --clr-warning-50: theme("colors.yellow.50");
+  --clr-warning-100: theme("colors.yellow.100");
+  --clr-warning-200: theme("colors.yellow.200");
+  --clr-warning-300: theme("colors.yellow.300");
+  --clr-warning-400: theme("colors.yellow.400");
+  --clr-warning-500: theme("colors.yellow.500");
+  --clr-warning-600: theme("colors.yellow.600");
+  --clr-warning-700: theme("colors.yellow.700");
+  --clr-warning-800: theme("colors.yellow.800");
+  --clr-warning-900: theme("colors.yellow.900");
+  --clr-warning-950: theme("colors.yellow.950");
+
+  --clr-danger-50: theme("colors.red.50");
+  --clr-danger-100: theme("colors.red.100");
+  --clr-danger-200: theme("colors.red.200");
+  --clr-danger-300: theme("colors.red.300");
+  --clr-danger-400: theme("colors.red.400");
+  --clr-danger-500: theme("colors.red.500");
+  --clr-danger-600: theme("colors.red.600");
+  --clr-danger-700: theme("colors.red.700");
+  --clr-danger-800: theme("colors.red.800");
+  --clr-danger-900: theme("colors.red.900");
+  --clr-danger-950: theme("colors.red.950");
+
+  --clr-white: theme("colors.neutral.50");
+  --clr-black: theme("colors.neutral.950");
+
   --ff-primary: "Montserrat", Arial, sans-serif;
   --ff-secondary: "Montserrat", Arial, sans-serif;
+
+  --fs-xs: theme("fontSize.xs");
+  --fs-sm: theme("fontSize.sm");
+  --fs-base: theme("fontSize.base");
+  --fs-lg: theme("fontSize.xl");
+  --fs-xl: theme("fontSize.3xl");
+  --fs-2xl: theme("fontSize.5xl");
+
+  --fw-thin: theme("fontWeight.thin");
+  --fw-extralight: theme("fontWeight.extralight");
+  --fw-light: theme("fontWeight.light");
+  --fw-normal: theme("fontWeight.normal");
+  --fw-medium: theme("fontWeight.medium");
+  --fw-semibold: theme("fontWeight.semibold");
+  --fw-bold: theme("fontWeight.bold");
+  --fw-extrabold: theme("fontWeight.extrabold");
+  --fw-black: theme("fontWeight.black");
+
+  --spacing-1: theme("spacing.1");
+  --spacing-2: theme("spacing.2");
+  --spacing-3: theme("spacing.4");
+  --spacing-4: theme("spacing.6");
+  --spacing-5: theme("spacing.8");
+
+  --wrapper-width: theme("screens.xl");
+
+  /* Cell Settings */
+  --cell-border-width: 3px;
+  --cell-border-style: outset;
+  --cell-border-style-alt: solid;
+
+  --clr-cell: var(--clr-primary-700);
+  --clr-cell-bg: var(--clr-secondary-200);
+  --clr-cell-border: var(--clr-secondary-300);
+  --cell-border: var(--cell-border-width) var(--cell-border-style)
+    var(--clr-cell-border);
+
+  --clr-cell-hover: var(--clr-primary-300);
+  --clr-cell-hover-bg: var(--clr-secondary-300);
+  --clr-cell-hover-border: var(--clr-secondary-300);
+  --cell-hover-border: var(--cell-border-width) var(--cell-border-style-alt)
+    var(--clr-cell-hover-border);
+
+  --clr-cell-shown: var(--clr-primary-700);
+  --clr-cell-shown-bg: var(--clr-secondary-200);
+  --clr-cell-shown-border: var(--clr-secondary-200);
+  --cell-shown-border: var(--cell-border-width) var(--cell-border-style-alt)
+    var(--clr-cell-shown-border);
+
+  --clr-cell-flagged: var(--clr-primary-700);
+  --clr-cell-flagged-bg: var(--clr-warning-200);
+  --clr-cell-flagged-border: var(--clr-secondary-300);
+  --cell-flagged-border: var(--cell-border-width) var(--cell-border-style)
+    var(--clr-cell-flagged-border);
+
+  --clr-cell-mine: var(--clr-primary-700);
+  --clr-cell-mine-bg: var(--clr-danger-200);
+  --clr-cell-mine-border: var(--clr-danger-200);
+  --cell-mine-border: var(--cell-border-width) var(--cell-border-style-alt)
+    var(--clr-cell-mine-border);
 }
 
 body {
   font-family: var(--ff-primary);
+  font-size: var(--fs-base);
+  color: var(--clr-primary-900);
+  background-color: var(--clr-secondary-100);
+}
+
+:focus {
+  outline: 2px solid var(--clr-black);
+  border: 2px solid var(--clr-white);
+}
+
+.flow > * + * {
+  margin-top: var(--spacing-3);
+}
+
+.wrapper {
+  max-width: calc(var(--wrapper-width) - (var(--spacing-3) * 2));
 }

@@ -1,0 +1,25 @@
+.cell,
+.cell-hidden {
+  color: var(--clr-cell);
+  background-color: var(--clr-cell-bg);
+  border: var(--cell-border);
+}
+
+.cell:hover,
+.cell-hidden:hover {
+  color: var(--clr-cell-hover);
+  background-color: var(--clr-cell-hover-bg);
+  border: var(--cell-hover-border);
+}
+
+.cell-flagged {
+  color: var(--clr-cell-flagged);
+  background-color: var(--clr-cell-flagged-bg);
+  border: var(--cell-flagged-border);
+}
+
+.cell-mine {
+  color: var(--clr-cell-mine);
+  background-color: var(--clr-cell-mine-bg);
+  border: var(--cell-mine-border);
+}

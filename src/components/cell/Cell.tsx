@@ -1,6 +1,7 @@
 import React from "react"
-import { CellData } from "../types"
-import { CELL_STATES } from "../constants"
+import { CellData } from "./../../types"
+import { CELL_STATES } from "./../../constants"
+import "./cell.css"
 
 interface CellProps {
   cell: CellData
@@ -11,11 +12,10 @@ interface CellProps {
 export const Cell: React.FC<CellProps> = ({ cell, onReveal, onFlag }) => (
   <button
     className={`
-      w-8 h-8 flex items-center justify-center
-      border border-gray-400
-      ${cell.state === CELL_STATES.HIDDEN ? "bg-gray-200" : "bg-white"}
-      ${cell.state === CELL_STATES.FLAGGED ? "bg-yellow-200" : ""}
-      ${cell.state === CELL_STATES.MINE ? "bg-red-500" : ""}
+      w-12 h-12 flex items-center justify-center cell
+      ${cell.state === CELL_STATES.HIDDEN ? "cell-hidden" : "cell-shown"}
+      ${cell.state === CELL_STATES.FLAGGED ? "cell-flagged" : ""}
+      ${cell.state === CELL_STATES.MINE ? "cell-mine" : ""}
     `}
     onClick={onReveal}
     onContextMenu={onFlag}

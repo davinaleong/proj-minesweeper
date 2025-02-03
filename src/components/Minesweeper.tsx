@@ -8,10 +8,10 @@ export const Minesweeper: React.FC = () => {
     useGame(GAME_CONFIG)
 
   return (
-    <main className="main p-4">
+    <main className="main | wrapper mx-auto p-4 flow">
       <header className="main__header">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold">Dav/Minesweeper</h1>
+        <div className="text-center flow">
+          <h1 className="text-3xl font-bold">Dav/Minesweeper</h1>
           <p className="text-sm">A simple Minesweeper game</p>
         </div>
       </header>

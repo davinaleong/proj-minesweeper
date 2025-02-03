@@ -15,10 +15,15 @@ export const Minesweeper: React.FC = () => {
           <p className="text-sm">A simple Minesweeper game</p>
         </div>
       </header>
+      {!gameOver && <div className="text-4xl">😀</div>}
+      {gameOver && (
+        <div className="text-center mt-4">
+          <div className="text-4xl">😭</div>
+        </div>
+      )}
       <Board board={board} onReveal={revealCell} onFlag={toggleFlag} />
       {gameOver && (
         <div className="text-center mt-4">
-          <div className="text-red-600 font-bold">Game Over!</div>
           <button
             className="mt-2 px-4 py-2 bg-blue-500 text-white rounded"
             onClick={resetGame}

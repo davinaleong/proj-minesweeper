@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  src: url(./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf)
+    format("truetype");
+}
+
 :root {
-  /* */
+  --ff-primary: "Montserrat", Arial, sans-serif;
+  --ff-secondary: "Montserrat", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--ff-primary);
 }

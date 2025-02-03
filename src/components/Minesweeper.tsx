@@ -8,7 +8,13 @@ export const Minesweeper: React.FC = () => {
     useGame(GAME_CONFIG)
 
   return (
-    <div className="p-4">
+    <main className="main p-4">
+      <header className="main__header">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold">Dav/Minesweeper</h1>
+          <p className="text-sm">A simple Minesweeper game</p>
+        </div>
+      </header>
       <Board board={board} onReveal={revealCell} onFlag={toggleFlag} />
       {gameOver && (
         <div className="text-center mt-4">
@@ -21,6 +27,12 @@ export const Minesweeper: React.FC = () => {
           </button>
         </div>
       )}
-    </div>
+      <footer className="main__footer">
+        <p className="text-center text-xs text-gray-500">
+          Dav/Minesweeper by{" "}
+          <a href="mailto:leong.shi.yun@gmail.com">Davina Leong</a>
+        </p>
+      </footer>
+    </main>
   )
 }

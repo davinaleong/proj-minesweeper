@@ -25,7 +25,7 @@ export const Minesweeper: React.FC = () => {
       {gameOver && (
         <div className="text-center mt-4">
           <button
-            className="mt-2 px-4 py-2 bg-blue-500 text-white rounded"
+            className="mt-2 px-4 py-2 text-semibold bg-blue-500 text-white rounded"
             onClick={resetGame}
           >
             New Game

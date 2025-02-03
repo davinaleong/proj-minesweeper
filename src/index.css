@@ -111,8 +111,8 @@
     var(--clr-cell-hover-border);
 
   --clr-cell-shown: var(--clr-primary-700);
-  --clr-cell-shown-bg: var(--clr-secondary-200);
-  --clr-cell-shown-border: var(--clr-secondary-200);
+  --clr-cell-shown-bg: var(--clr-secondary-50);
+  --clr-cell-shown-border: var(--clr-secondary-50);
   --cell-shown-border: var(--cell-border-width) var(--cell-border-style-alt)
     var(--clr-cell-shown-border);
 

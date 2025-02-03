@@ -12,6 +12,12 @@
   border: var(--cell-hover-border);
 }
 
+.cell-shown {
+  color: var(--clr-cell-shown);
+  background-color: var(--clr-cell-shown-bg);
+  border: var(--cell-shown-border);
+}
+
 .cell-flagged {
   color: var(--clr-cell-flagged);
   background-color: var(--clr-cell-flagged-bg);

@@ -1,0 +1,9 @@
+.instructions-section h2 {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+}
+
+.instructions-section h3 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+}

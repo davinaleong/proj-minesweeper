@@ -71,9 +71,10 @@
   --fs-xs: theme("fontSize.xs");
   --fs-sm: theme("fontSize.sm");
   --fs-base: theme("fontSize.base");
-  --fs-lg: theme("fontSize.xl");
-  --fs-xl: theme("fontSize.3xl");
-  --fs-2xl: theme("fontSize.5xl");
+  --fs-lg: theme("fontSize.lg");
+  --fs-xl: theme("fontSize.2xl");
+  --fs-2xl: theme("fontSize.4xl");
+  --fs-3xl: theme("fontSize.6xl");
 
   --fw-thin: theme("fontWeight.thin");
   --fw-extralight: theme("fontWeight.extralight");

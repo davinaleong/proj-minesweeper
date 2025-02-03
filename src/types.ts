@@ -1,3 +1,4 @@
+// Game Types
 export interface CellData {
   isMine: boolean
   neighbor_mines: number
@@ -17,3 +18,6 @@ export interface GameState {
   gameOver: boolean
   gameWon: boolean
 }
+
+// Misc Types
+export type InstructionsState = "hidden" | "shown"

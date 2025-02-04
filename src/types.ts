@@ -37,3 +37,8 @@ export interface GameState {
 // - hidden: Instructions are not visible
 // - shown: Instructions are visible to player
 export type InstructionsState = "hidden" | "shown"
+
+// State for updates modal/overlay
+// - hidden: updates are not visible
+// - shown: updates are visible to player
+export type UpdatesState = "hidden" | "shown"

@@ -20,3 +20,9 @@ export const INSTRUCTIONS_STATES = {
   HIDDEN: "hidden" as const, // Instructions are not visible
   SHOWN: "shown" as const, // Instructions are being displayed
 }
+
+// States for the updates modal/overlay
+export const UPDATES_STATES = {
+  HIDDEN: "hidden" as const, // Updates are not visible
+  SHOWN: "shown" as const, // Updates are being displayed
+}

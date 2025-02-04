@@ -1,12 +1,21 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Board } from "./../board/Board"
 import { Instructions } from "../instructions/Instructions"
-import { useGame } from "../../hooks/useGame"
-import { GAME_CONFIG } from "../../constants"
+import { useGame } from "./../../hooks/useGame"
+import { GAME_CONFIG, UPDATES_STATES } from "./../../constants"
 
 export const Minesweeper: React.FC = () => {
   const { board, gameOver, revealCell, toggleFlag, resetGame } =
     useGame(GAME_CONFIG)
+  const [updates, setUpdates] = useState(UPDATES_STATES.HIDDEN)
+
+  const onUpdatesShow = () => {
+    setUpdates(UPDATES_STATES.SHOWN)
+  }
+
+  const onHide = () => {
+    setUpdates(UPDATES_STATES.HIDDEN)
+  }
 
   return (
     <main className="main | wrapper mx-auto p-4 flow">
@@ -37,8 +46,17 @@ export const Minesweeper: React.FC = () => {
 
       <Board board={board} onReveal={revealCell} onFlag={toggleFlag} />
 
-      <footer className="main__footer mt-8">
-        <p className="text-center text-xs text-gray-500">
+      <footer className="main__footer | mt-8 flow">
+        <p className="text-center text-sm">
+          <button
+            type="button"
+            className="text-blue-500 hover:text-blue-600"
+            onClick={onUpdatesShow}
+          >
+            Updates
+          </button>
+        </p>
+        <p className="text-center text-sm text-gray-500">
           Dav/Minesweeper by{" "}
           <a
             href="mailto:leong.shi.yun@gmail.com"
@@ -48,6 +66,24 @@ export const Minesweeper: React.FC = () => {
           </a>
         </p>
       </footer>
+
+      <div
+        className={`updates-dialog ${
+          updates === UPDATES_STATES.HIDDEN ? "hidden" : ""
+        } fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50`}
+      >
+        <section className="relative bg-white rounded-lg shadow-xl max-w-2xl w-11/12 md:w-3/4 p-6 m-4 max-h-[90vh] overflow-y-auto">
+          <button
+            type="button"
+            className="sticky top-0 float-right text-red-700 hover:text-red-900 transition-colors text-6xl"
+            onClick={onHide} // Attach the onHide function to the button click
+          >
+            &times;
+          </button>
+
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Updates</h2>
+        </section>
+      </div>
     </main>
   )
 }

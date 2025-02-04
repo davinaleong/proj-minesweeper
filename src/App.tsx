@@ -1,4 +1,4 @@
-import { Minesweeper } from "./components/Minesweeper"
+import { Minesweeper } from "./components/minesweeper/Minesweeper"
 import "./App.css"
 
 function App() {

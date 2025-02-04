@@ -1,8 +1,8 @@
 import React from "react"
 import { Board } from "./Board"
-import { Instructions } from "./instructions/Instructions"
-import { useGame } from "../hooks/useGame"
-import { GAME_CONFIG } from "../constants"
+import { Instructions } from "../instructions/Instructions"
+import { useGame } from "../../hooks/useGame"
+import { GAME_CONFIG } from "../../constants"
 
 export const Minesweeper: React.FC = () => {
   const { board, gameOver, revealCell, toggleFlag, resetGame } =

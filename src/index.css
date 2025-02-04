@@ -149,3 +149,7 @@ body {
 .wrapper {
   max-width: calc(var(--wrapper-width) - (var(--spacing-3) * 2));
 }
+
+button {
+  cursor: pointer;
+}

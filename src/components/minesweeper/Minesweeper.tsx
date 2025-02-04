@@ -1,5 +1,5 @@
 import React from "react"
-import { Board } from "./Board"
+import { Board } from "./../board/Board"
 import { Instructions } from "../instructions/Instructions"
 import { useGame } from "../../hooks/useGame"
 import { GAME_CONFIG } from "../../constants"
@@ -18,6 +18,8 @@ export const Minesweeper: React.FC = () => {
       </header>
 
       <div className="game-status text-center my-4">
+        <Instructions />
+
         {!gameOver ? (
           <div className="text-4xl">😀</div>
         ) : (
@@ -34,8 +36,6 @@ export const Minesweeper: React.FC = () => {
       </div>
 
       <Board board={board} onReveal={revealCell} onFlag={toggleFlag} />
-
-      <Instructions />
 
       <footer className="main__footer mt-8">
         <p className="text-center text-xs text-gray-500">

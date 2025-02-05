@@ -10,3 +10,11 @@
 ### `v1.0.2` - 5th Feburary 2025
 
     1. Added a "How to Play" button.
+    2. Added "How to Play" in Simplified Chinese, Malay, and Tamil.
+
+---
+
+### Coming Soon
+
+    1. Mobile-friendly version.
+    1. Sound effects

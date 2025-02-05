@@ -210,10 +210,30 @@ export const Instructions: React.FC<InstructionsProps> = ({
           <p className="text-red-500 mt-4">{error}</p>
         ) : (
           <div className="prose prose-sm text-left max-w-none mt-6">
-            <ReactMarkdown className="flow">{english}</ReactMarkdown>
-            <ReactMarkdown className="flow">{chinese}</ReactMarkdown>
-            <ReactMarkdown className="flow">{malay}</ReactMarkdown>
-            <ReactMarkdown className="flow">{tamil}</ReactMarkdown>
+            <ReactMarkdown
+              className={`flow ${
+                language !== LANGUAGES.ENGLISH ? "hidden" : ""
+              }`}
+            >
+              {english}
+            </ReactMarkdown>
+            <ReactMarkdown
+              className={`flow ${
+                language !== LANGUAGES.CHINESE ? "hidden" : ""
+              }`}
+            >
+              {chinese}
+            </ReactMarkdown>
+            <ReactMarkdown
+              className={`flow ${language !== LANGUAGES.MALAY ? "hidden" : ""}`}
+            >
+              {malay}
+            </ReactMarkdown>
+            <ReactMarkdown
+              className={`flow ${language !== LANGUAGES.TAMIL ? "hidden" : ""}`}
+            >
+              {tamil}
+            </ReactMarkdown>
           </div>
         )}
       </section>

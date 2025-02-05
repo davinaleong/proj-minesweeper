@@ -9,7 +9,8 @@ import { GAME_CONFIG, DIALOG_STATES } from "./../../constants"
 export const Minesweeper: React.FC = () => {
   const { board, gameOver, revealCell, toggleFlag, resetGame } =
     useGame(GAME_CONFIG)
-  const [placeFlag, setPlaceFlag] = useState(false)
+  const [placeFlag, setPlaceFlag] = useState<boolean>(false)
+
   const [instructions, setInstructions] = useState<DialogStateType>(
     DIALOG_STATES.SHOWN
   )

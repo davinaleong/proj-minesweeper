@@ -21,7 +21,7 @@ export const Cell: React.FC<CellProps> = ({
   return (
     <button
       className={`
-        w-12 h-12 flex items-center justify-center cell
+        w-9 h-9 flex items-center justify-center cell
         ${cell.state === CELL_STATES.HIDDEN ? "cell-hidden" : "cell-shown"}
         ${cell.state === CELL_STATES.FLAGGED ? "cell-flagged" : ""}
         ${cell.state === CELL_STATES.MINE ? "cell-mine" : ""}

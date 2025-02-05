@@ -40,8 +40,8 @@ export const Minesweeper: React.FC = () => {
     <main className="main | wrapper mx-auto p-4 flow">
       <header className="main__header">
         <div className="text-center flow">
-          <h1 className="text-6xl font-bold">Dav/Minesweeper</h1>
-          <p className="text-sm">A simple Minesweeper game</p>
+          <h1 className="text-slate-700 text-4xl font-bold">Dav/Minesweeper</h1>
+          <p className="text-slate-700">A simple Minesweeper game</p>
         </div>
       </header>
 
@@ -58,21 +58,21 @@ export const Minesweeper: React.FC = () => {
       <div className="flex align-middle justify-center gap-3">
         <button
           type="button"
-          className="px-4 py-2 text-white text-semibold bg-blue-500 hover:bg-blue-600 rounded transition-colors"
+          className="px-2 py-1 text-white text-semibold bg-blue-500 hover:bg-blue-600 rounded transition-colors"
           onClick={onInstructionsShow}
         >
           How to Play
         </button>
         <button
           type="button"
-          className="px-4 py-2 text-white text-semibold bg-slate-500 hover:bg-slate-600 rounded transition-colors"
+          className="px-2 py-1 text-white text-semibold bg-slate-500 hover:bg-slate-600 rounded transition-colors"
           onClick={onUpdatesShow}
         >
           Updates
         </button>
         <button
           type="button"
-          className={`w-12 h-12 flex items-center justify-center cell ${
+          className={`w-9 h-9 flex items-center justify-center cell ${
             placeFlag ? "cell-flagged-yes" : "cell-flagged"
           }`}
           onClick={onPlaceFlagToggle}
@@ -99,7 +99,7 @@ export const Minesweeper: React.FC = () => {
       />
 
       <footer className="main__footer | mt-8 flow">
-        <p className="text-center text-sm text-gray-500">
+        <p className="text-center text-sm text-slate-500">
           Dav/Minesweeper by{" "}
           <a
             href="mailto:leong.shi.yun@gmail.com"

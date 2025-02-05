@@ -147,7 +147,7 @@ export const Instructions: React.FC<InstructionsProps> = ({
         instructions === INSTRUCTIONS_STATES.HIDDEN ? "hidden" : ""
       } fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50`}
     >
-      <section className="relative bg-white rounded-lg shadow-xl max-w-2xl w-11/12 md:w-3/4 p-6 m-4 max-h-[90vh] overflow-y-auto">
+      <section className="relative bg-white rounded-lg shadow-xl max-w-2xl w-11/12 md:w-3/4 p-3 m-4 max-h-[90vh] overflow-y-auto">
         <button
           type="button"
           className="sticky top-0 float-right text-red-700 hover:text-red-900 transition-colors text-6xl"
@@ -158,10 +158,10 @@ export const Instructions: React.FC<InstructionsProps> = ({
 
         <h2 className="text-2xl font-bold text-gray-900 mb-6">How to Play</h2>
 
-        <div className="flex align-center justify-center gap-3">
+        <div className="flex align-center justify-center gap-1">
           <button
             type="button"
-            className={`text-xl p-2 text-white ${
+            className={`text-xl px-2 py-1 text-white ${
               language === LANGUAGES.ENGLISH
                 ? "bg-blue-500 hover:bg-blue-600"
                 : "bg-slate-500 hover:bg-slate-600"
@@ -172,7 +172,7 @@ export const Instructions: React.FC<InstructionsProps> = ({
           </button>
           <button
             type="button"
-            className={`text-xl p-2 text-white ${
+            className={`text-xl px-2 py-1 text-white ${
               language === LANGUAGES.CHINESE
                 ? "bg-blue-500 hover:bg-blue-600"
                 : "bg-slate-500 hover:bg-slate-600"
@@ -183,7 +183,7 @@ export const Instructions: React.FC<InstructionsProps> = ({
           </button>
           <button
             type="button"
-            className={`text-xl p-2 text-white ${
+            className={`text-xl px-2 py-1 text-white ${
               language === LANGUAGES.MALAY
                 ? "bg-blue-500 hover:bg-blue-600"
                 : "bg-slate-500 hover:bg-slate-600"
@@ -194,7 +194,7 @@ export const Instructions: React.FC<InstructionsProps> = ({
           </button>
           <button
             type="button"
-            className={`text-xl p-2 text-white ${
+            className={`text-xl px-2 py-1 text-white ${
               language === LANGUAGES.TAMIL
                 ? "bg-blue-500 hover:bg-blue-600"
                 : "bg-slate-500 hover:bg-slate-600"

@@ -19,5 +19,4 @@
 
 ### Coming Soon
 
-    1. Mobile-friendly version.
     1. Sound effects

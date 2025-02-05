@@ -21,9 +21,8 @@ Selepas mengklik kotak, anda mungkin melihat nombor. Maksud nombor tersebut iala
 
 ### Pergerakan Asas 🕹️
 
-- **Klik kiri**: Membuka kotak ✅
-- **Klik kanan**: Meletakkan bendera 🚩 untuk menandakan lokasi periuk api
-- **Klik kanan dua kali**: Menghapuskan bendera jika anda ingin mengubah fikiran 🔄
+- **Klik kiri**: Mendedahkan apa yang ada di bawah petak ✅
+- **Togol Mod Bendera**: Apabila Mod Bendera dihidupkan, mengetik petak akan meletakkan bendera 🚩 dan bukannya mendedahkan petak. Apabila dimatikan, mengetik akan mendedahkan petak seperti biasa. Ini menjadikan permainan lebih lancar, terutamanya pada peranti mudah alih.
 
 ### Petua Keselamatan ⚠️
 

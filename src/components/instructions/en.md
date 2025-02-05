@@ -23,8 +23,7 @@ After you click a square, you might see a number. Here's what the numbers mean:
 ### Basic Moves 🕹️
 
 - **Left-click**: Reveals what's under a square ✅
-- **Right-click**: Places a flag 🚩 where you think a mine is
-- **Double right-click**: Removes a flag if you change your mind 🔄
+- **Flag Mode Toggle**: When Flag Mode is ON, tapping a square will place a flag 🚩 instead of revealing it. When OFF, tapping will uncover the square as usual. This makes gameplay smoother, especially on mobile devices.
 
 ### Safety Tips ⚠️
 

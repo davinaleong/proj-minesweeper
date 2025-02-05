@@ -16,6 +16,7 @@ import {
 export const Minesweeper: React.FC = () => {
   const { board, gameOver, revealCell, toggleFlag, resetGame } =
     useGame(GAME_CONFIG)
+  const [placeFlag, setPlaceFlag] = useState(false)
   const [instructions, setInstructions] = useState<InstructionsStateType>(
     INSTRUCTIONS_STATES.SHOWN
   )
@@ -29,6 +30,10 @@ export const Minesweeper: React.FC = () => {
 
   const onUpdatesShow = () => {
     setUpdates(UPDATES_STATES.SHOWN)
+  }
+
+  const onPlaceFlagToggle = () => {
+    setPlaceFlag(!placeFlag)
   }
 
   return (
@@ -65,6 +70,15 @@ export const Minesweeper: React.FC = () => {
         >
           Updates
         </button>
+        <button
+          type="button"
+          className={`w-12 h-12 flex items-center justify-center cell ${
+            placeFlag ? "cell-flagged-yes" : "cell-flagged"
+          }`}
+          onClick={onPlaceFlagToggle}
+        >
+          {"🚩"}
+        </button>
         {gameOver ? (
           <button
             className="px-4 py-2 text-semibold bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
@@ -77,7 +91,12 @@ export const Minesweeper: React.FC = () => {
         )}
       </div>
 
-      <Board board={board} onReveal={revealCell} onFlag={toggleFlag} />
+      <Board
+        board={board}
+        placeFlag={placeFlag}
+        onReveal={revealCell}
+        onFlag={toggleFlag}
+      />
 
       <footer className="main__footer | mt-8 flow">
         <p className="text-center text-sm text-gray-500">

@@ -5,25 +5,34 @@ import "./cell.css"
 
 interface CellProps {
   cell: CellData
+  placeFlag: boolean
   onReveal: () => void
-  onFlag: (e: React.MouseEvent) => void
+  onFlag: () => void
 }
 
-export const Cell: React.FC<CellProps> = ({ cell, onReveal, onFlag }) => (
-  <button
-    className={`
-      w-12 h-12 flex items-center justify-center cell
-      ${cell.state === CELL_STATES.HIDDEN ? "cell-hidden" : "cell-shown"}
-      ${cell.state === CELL_STATES.FLAGGED ? "cell-flagged" : ""}
-      ${cell.state === CELL_STATES.MINE ? "cell-mine" : ""}
-    `}
-    onClick={onReveal}
-    onContextMenu={onFlag}
-  >
-    {cell.state === CELL_STATES.REVEALED &&
-      cell.neighbor_mines > 0 &&
-      cell.neighbor_mines}
-    {cell.state === CELL_STATES.FLAGGED && "🚩"}
-    {cell.state === CELL_STATES.MINE && "💣"}
-  </button>
-)
+export const Cell: React.FC<CellProps> = ({
+  cell,
+  placeFlag,
+  onReveal,
+  onFlag,
+}) => {
+  const fn = placeFlag ? onFlag : onReveal
+
+  return (
+    <button
+      className={`
+        w-12 h-12 flex items-center justify-center cell
+        ${cell.state === CELL_STATES.HIDDEN ? "cell-hidden" : "cell-shown"}
+        ${cell.state === CELL_STATES.FLAGGED ? "cell-flagged" : ""}
+        ${cell.state === CELL_STATES.MINE ? "cell-mine" : ""}
+      `}
+      onClick={fn}
+    >
+      {cell.state === CELL_STATES.REVEALED &&
+        cell.neighbor_mines > 0 &&
+        cell.neighbor_mines}
+      {cell.state === CELL_STATES.FLAGGED && "🚩"}
+      {cell.state === CELL_STATES.MINE && "💣"}
+    </button>
+  )
+}

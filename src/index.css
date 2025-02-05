@@ -97,7 +97,8 @@
   /* Cell Settings */
   --cell-border-width: 3px;
   --cell-border-style: outset;
-  --cell-border-style-alt: solid;
+  --cell-border-style-yes: inset;
+  --cell-border-style-flat: solid;
 
   --clr-cell: var(--clr-primary-700);
   --clr-cell-bg: var(--clr-secondary-200);
@@ -108,13 +109,13 @@
   --clr-cell-hover: var(--clr-primary-300);
   --clr-cell-hover-bg: var(--clr-secondary-300);
   --clr-cell-hover-border: var(--clr-secondary-300);
-  --cell-hover-border: var(--cell-border-width) var(--cell-border-style-alt)
+  --cell-hover-border: var(--cell-border-width) var(--cell-border-style-flat)
     var(--clr-cell-hover-border);
 
   --clr-cell-shown: var(--clr-primary-700);
   --clr-cell-shown-bg: var(--clr-secondary-50);
   --clr-cell-shown-border: var(--clr-secondary-50);
-  --cell-shown-border: var(--cell-border-width) var(--cell-border-style-alt)
+  --cell-shown-border: var(--cell-border-width) var(--cell-border-style-flat)
     var(--clr-cell-shown-border);
 
   --clr-cell-flagged: var(--clr-primary-700);
@@ -122,6 +123,12 @@
   --clr-cell-flagged-border: var(--clr-secondary-300);
   --cell-flagged-border: var(--cell-border-width) var(--cell-border-style)
     var(--clr-cell-flagged-border);
+
+  --clr-cell-flagged-yes: var(--clr-primary-700);
+  --clr-cell-flagged-yes-bg: var(--clr-warning-200);
+  --clr-cell-flagged-yes-border: var(--clr-secondary-300);
+  --cell-flagged-yes-border: var(--cell-border-width)
+    var(--cell-border-style-yes) var(--clr-cell-flagged-yes-border);
 
   --clr-cell-mine: var(--clr-primary-700);
   --clr-cell-mine-bg: var(--clr-danger-200);

@@ -86,8 +86,7 @@ export const useGame = (config: GameConfig) => {
 
   // Handler for toggling flag on right-click
   const toggleFlag = useCallback(
-    (y: number, x: number, e: React.MouseEvent): void => {
-      e.preventDefault() // Prevent context menu from appearing
+    (y: number, x: number): void => {
       if (gameState.gameOver || gameState.gameWon) return
 
       setGameState((prevState) => {

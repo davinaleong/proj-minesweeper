@@ -13,6 +13,7 @@
     2. Added "How to Play" in Simplified Chinese, Malay, and Tamil.
     3. Fixed build errors.
     4. Placed all buttons together and colour-coded them.
+    5. Added a "Flag Mode" to place flags using the left-click instead of the right-click to make it mobile-friendly.
 
 ---
 

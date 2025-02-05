@@ -1,73 +1,72 @@
-### Pengenalan 🎉
+### **Pengenalan**
 
-Selamat datang ke Minesweeper! 🏁 Permainan komputer klasik ini adalah teka-teki yang menggabungkan strategi 🧠 dan ingatan. Jangan risau jika ia kelihatan sukar pada mulanya – kami akan menerangkannya langkah demi langkah.
+Selamat datang ke Minesweeper! Permainan teka-teki klasik ini menggabungkan strategi dan memori. Jika ia kelihatan mencabar pada mulanya, jangan risau—kami akan terangkan langkah demi langkah.
 
-### Matlamat Permainan 🎯
+### **Objektif Permainan**
 
-Matlamat anda adalah untuk mencari semua periuk api 💣 yang tersembunyi di papan permainan tanpa mengkliknya. Gunakan nombor 🔢 sebagai petunjuk untuk menentukan lokasi periuk api.
+Matlamat anda adalah untuk mencari semua periuk yang tersembunyi di papan tanpa mengklik sebarang periuk. Gunakan nombor sebagai petunjuk untuk meneka di mana periuk-periuk tersebut.
 
-### Cara Bermula 🚀
+### **Mula Bermain**
 
-1️⃣ Apabila permainan bermula, anda akan melihat grid dengan kotak kosong ⬜  
-2️⃣ Klik kiri pada mana-mana kotak untuk memulakan permainan 🖱️  
-3️⃣ Petua: Sebaiknya mulakan dengan kotak di sudut atau tepi 🎯
+1. Apabila anda mula permainan, anda akan melihat grid petak kosong.
+2. Klik kiri pada mana-mana petak untuk mula bermain.
+3. **Petua**: Disarankan untuk bermula dengan petak di penjuru atau tepi.
 
-### Memahami Nombor 🔢
+### **Memahami Nombor**
 
-Selepas mengklik kotak, anda mungkin melihat nombor. Maksud nombor tersebut ialah:
+Setelah anda mengklik petak, anda mungkin akan melihat nombor. Berikut adalah maksud nombor tersebut:
 
-- Nombor menunjukkan berapa banyak periuk api 💣 yang berada di sekeliling kotak tersebut
-- Contohnya, jika anda melihat “3️⃣”, ini bermaksud terdapat 3 periuk api di kotak sekelilingnya (atas, bawah, kiri, kanan atau secara menyerong)
+- Nombor memberitahu anda berapa banyak periuk yang berada di sekitar petak tersebut.
+- Sebagai contoh, jika anda melihat "3", ini bermaksud terdapat 3 periuk di petak-petak bersebelahan.
+- Periuk boleh berada di atas, bawah, kiri, kanan, atau serong ke nombor tersebut.
 
-### Pergerakan Asas 🕹️
+### **Pergerakan Asas**
 
-- **Klik kiri**: Mendedahkan apa yang ada di bawah petak ✅
-- **Togol Mod Bendera**: Apabila Mod Bendera dihidupkan, mengetik petak akan meletakkan bendera 🚩 dan bukannya mendedahkan petak. Apabila dimatikan, mengetik akan mendedahkan petak seperti biasa. Ini menjadikan permainan lebih lancar, terutamanya pada peranti mudah alih.
+- **Klik kiri**: Mendedahkan kandungan di bawah petak.
+- **Togol Mod Bendera**: Apabila Mod Bendera diaktifkan, mengetik pada petak akan meletakkan bendera, bukannya mendedahkannya. Apabila dimatikan, mengetik akan membuka petak seperti biasa. Ini menjadikan permainan lebih lancar, terutamanya pada peranti mudah alih.
 
-### Petua Keselamatan ⚠️
+### **Petua Keselamatan**
 
-1️⃣ Jangan teka secara rawak kecuali benar-benar perlu ❌  
-2️⃣ Jangan tergesa-gesa – tiada had masa ⏳  
-3️⃣ Jika tidak pasti, tandakan kotak dengan bendera 🚩 dan periksa kemudian
+1. Elakkan meneka kecuali benar-benar perlu.
+2. Luangkan masa—tidak perlu tergesa-gesa.
+3. Jika anda tidak pasti mengenai sesuatu petak, tandakan dengan bendera dan kembali semula kemudian.
 
-### Tip Strategi 🧠
+### **Petua Strategi**
 
-1️⃣ Mulakan dengan kotak di sudut dan tepi 📐  
-2️⃣ Perhatikan corak nombor – jika “1️⃣” hanya mempunyai satu kotak tertutup bersebelahan, itu pasti periuk api 💣  
-3️⃣ Gunakan bendera 🚩 untuk menandakan periuk api dan membantu ingatan  
-4️⃣ Jika menemui kawasan kosong yang besar, gunakan sebagai zon selamat untuk meneruskan pencarian 🏞️
+1. Mulakan dengan tepi dan penjuru.
+2. Cari corak—jika anda melihat "1" dengan hanya satu petak yang belum dibuka di sebelahnya, petak tersebut pasti mengandungi periuk.
+3. Gunakan bendera untuk menandakan periuk—ini membantu anda menjejaki.
+4. Apabila anda menemui kawasan kosong yang besar, gunakan kawasan itu sebagai zon selamat untuk terus bergerak.
 
-### Corak Biasa 🔍
+### **Corak Umum**
 
-1️⃣ Jika anda melihat “1️⃣” dengan hanya satu kotak tertutup bersebelahan, kotak itu pasti mengandungi periuk api 💣  
-2️⃣ Jika terdapat dua “1️⃣” bersebelahan dengan dua kotak tertutup, periuk api biasanya berada dalam kedudukan menyerong ➕
+1. Jika anda melihat "1" dengan hanya satu petak yang belum dibuka di dekatnya, petak tersebut mempunyai periuk.
+2. Apabila dua "1" berdekatan dan ada dua petak yang belum dibuka, periuk mungkin berada pada kedudukan serong.
 
-### Maksud Warna 🎨
+### **Makna Warna**
 
-- **Kotak kelabu**: Belum diklik 🔳
-- **Kotak putih**: Kotak selamat yang telah dibuka ⬜
-- **Nombor** berwarna-warni untuk memudahkan bacaan 🌈
-- **Merah**: Menunjukkan lokasi periuk api selepas permainan tamat 🔴💣
+- **Petak kelabu**: Belum diklik.
+- **Petak putih**: Petak selamat yang telah dibuka.
+- **Nombor**: Ditunjukkan dalam warna yang berbeza untuk memudahkan pembacaan.
+- **Merah**: Menunjukkan periuk apabila permainan berakhir.
 
-### Bila Anda Menang 🏆
+### **Apabila Anda Menang**
 
-✅ Anda menang apabila semua periuk api ditandakan dengan betul 🚩  
-✅ Tidak perlu membuka setiap kotak selamat ✨  
-✅ Pastikan semua periuk api telah ditemui 🎯
+- Anda menang apabila anda telah menandakan semua periuk dengan betul.
+- Anda tidak perlu membuka setiap petak selamat.
+- Pastikan semua periuk telah dijumpai untuk menang.
 
-### Jika Anda Tersilap ❌
+### **Jika Anda Klik Periuk**
 
-- Jika anda mengklik periuk api, permainan akan tamat 💥
-- Jangan risau! Klik **“Permainan Baru”** 🔄 untuk mencuba semula
-- Setiap permainan adalah unik, jadi anda mendapat cabaran baru 🌟
+- Permainan akan berakhir serta-merta.
+- Jangan risau! Klik **"Permainan Baru"** untuk mula semula.
+- Setiap permainan adalah berbeza, jadi anda akan mendapat peluang baru untuk berlatih.
 
-### Ingat 📌
+### **Petua Akhir**
 
-✅ Tiada had masa – ambil masa yang diperlukan ⏳  
-✅ Gunakan bendera 🚩 dengan kerap untuk menanda periuk api  
-✅ Latihan membuatkan anda lebih mahir 💪  
-✅ Simpan kemajuan dengan menandakan periuk api 🏁
+- Tiada had masa—ambil masa yang anda perlukan.
+- Gunakan bendera dengan bijak untuk menandakan periuk.
+- Latihan membawa kepada kesempurnaan.
+- Jika anda tidak pasti, minta bantuan daripada kawan atau keluarga.
 
-Perlukan bantuan? 🤔 Minta rakan atau ahli keluarga 👨‍👩‍👧‍👦 untuk membantu menganalisis permainan. Semoga berjaya 🍀 dan nikmati permainan! 🎮
-
-Diterjemahkan oleh AI
+Semoga berjaya dan nikmati permainan ini!

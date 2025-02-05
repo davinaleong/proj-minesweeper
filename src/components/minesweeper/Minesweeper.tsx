@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Board } from "./../board/Board"
 import { Instructions } from "../instructions/Instructions"
+import { Updates } from "../updates/Updates"
 import { useGame } from "./../../hooks/useGame"
 import {
   GAME_CONFIG,
@@ -20,10 +21,6 @@ export const Minesweeper: React.FC = () => {
 
   const onUpdatesShow = () => {
     setUpdates(UPDATES_STATES.SHOWN)
-  }
-
-  const onUpdatesHide = () => {
-    setUpdates(UPDATES_STATES.HIDDEN)
   }
 
   return (
@@ -86,23 +83,7 @@ export const Minesweeper: React.FC = () => {
         </p>
       </footer>
 
-      <div
-        className={`updates-dialog ${
-          updates === UPDATES_STATES.HIDDEN ? "hidden" : ""
-        } fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50`}
-      >
-        <section className="relative bg-white rounded-lg shadow-xl max-w-2xl w-11/12 md:w-3/4 p-6 m-4 max-h-[90vh] overflow-y-auto">
-          <button
-            type="button"
-            className="sticky top-0 float-right text-red-700 hover:text-red-900 transition-colors text-6xl"
-            onClick={onUpdatesHide} // Attach the onHide function to the button click
-          >
-            &times;
-          </button>
-
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Updates</h2>
-        </section>
-      </div>
+      <Updates updates={updates} setUpdates={setUpdates} />
     </main>
   )
 }

@@ -14,7 +14,6 @@ export const Instructions: React.FC<InstructionsProps> = ({
   setInstructions,
 }) => {
   const [language, setLanguage] = useState(LANGUAGES.ENGLISH)
-  // const [markdown, setMarkdown] = useState<string>("")
 
   const [english, setEnglish] = useState<string>("")
   const [chinese, setChinese] = useState<string>("")

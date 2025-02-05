@@ -35,19 +35,9 @@ export const Minesweeper: React.FC = () => {
       <header className="main__header">
         <div className="text-center flow">
           <h1 className="text-slate-700 text-4xl font-bold">Dav/Minesweeper</h1>
-          <p className="text-slate-700">A simple Minesweeper game</p>
+          <p className="text-slate-700 font-bold">A simple Minesweeper game</p>
         </div>
       </header>
-
-      <div className="game-status text-center my-4">
-        {!gameOver ? (
-          <div className="text-4xl">😀</div>
-        ) : (
-          <div className="text-center">
-            <div className="text-4xl">😭</div>
-          </div>
-        )}
-      </div>
 
       <div className="flex align-middle justify-center gap-3">
         <button

@@ -2,6 +2,10 @@ import React, { useState } from "react"
 import { Board } from "./../board/Board"
 import { Instructions } from "../instructions/Instructions"
 import { Updates } from "../updates/Updates"
+import {
+  InstructionsState as InstructionsStateType,
+  UpdatesState as UpdatesStateType,
+} from "./../../types"
 import { useGame } from "./../../hooks/useGame"
 import {
   GAME_CONFIG,
@@ -12,8 +16,12 @@ import {
 export const Minesweeper: React.FC = () => {
   const { board, gameOver, revealCell, toggleFlag, resetGame } =
     useGame(GAME_CONFIG)
-  const [instructions, setInstructions] = useState(INSTRUCTIONS_STATES.SHOWN)
-  const [updates, setUpdates] = useState(UPDATES_STATES.HIDDEN)
+  const [instructions, setInstructions] = useState<InstructionsStateType>(
+    INSTRUCTIONS_STATES.SHOWN
+  )
+  const [updates, setUpdates] = useState<UpdatesStateType>(
+    UPDATES_STATES.HIDDEN
+  )
 
   const onInstructionsShow = () => {
     setInstructions(INSTRUCTIONS_STATES.SHOWN)

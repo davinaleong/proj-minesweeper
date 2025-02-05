@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, Dispatch, SetStateAction } from "react"
 import ReactMarkdown from "react-markdown"
-import { InstructionsState } from "./../../types"
+import { InstructionsState, Languages as LanguagesType } from "./../../types"
 import { INSTRUCTIONS_STATES, LANGUAGES } from "./../../constants"
 import "./instructions.css"
 
 interface InstructionsProps {
   instructions: InstructionsState
-  setInstructions: React.FC<InstructionsState>
+  setInstructions: Dispatch<SetStateAction<InstructionsState>>
 }
 
 export const Instructions: React.FC<InstructionsProps> = ({
   instructions,
   setInstructions,
 }) => {
-  const [language, setLanguage] = useState(LANGUAGES.ENGLISH)
+  const [language, setLanguage] = useState<LanguagesType>(LANGUAGES.ENGLISH)
 
   const [english, setEnglish] = useState<string>("")
   const [chinese, setChinese] = useState<string>("")

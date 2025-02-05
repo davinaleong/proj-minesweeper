@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, Dispatch, SetStateAction } from "react"
 import ReactMarkdown from "react-markdown"
 import { UpdatesState } from "./../../types"
 import { UPDATES_STATES } from "./../../constants"
@@ -6,7 +6,7 @@ import "./updates.css"
 
 interface UpdatesProps {
   updates: UpdatesState
-  setUpdates: React.FC<UpdatesState>
+  setUpdates: Dispatch<SetStateAction<UpdatesState>>
 }
 
 export const Updates: React.FC<UpdatesProps> = ({ updates, setUpdates }) => {

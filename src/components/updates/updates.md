@@ -20,4 +20,4 @@
 
 ### Coming Soon
 
-    1. Sound effects
+    1. Better Win/Loose UI

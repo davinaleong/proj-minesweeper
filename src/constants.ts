@@ -15,6 +15,12 @@ export const CELL_STATES = {
   MINE: "mine" as const, // Revealed mine (only shown on game over)
 }
 
+// States for the dialog modal/overlay
+export const DIALOG_STATES = {
+  HIDDEN: "hidden" as const, // Dialog are not visible
+  SHOWN: "shown" as const, // Dialog are being displayed
+}
+
 // States for the instructions modal/overlay
 export const INSTRUCTIONS_STATES = {
   HIDDEN: "hidden" as const, // Instructions are not visible

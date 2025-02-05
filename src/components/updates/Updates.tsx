@@ -1,12 +1,12 @@
 import React, { useEffect, useState, Dispatch, SetStateAction } from "react"
 import ReactMarkdown from "react-markdown"
-import { UpdatesState } from "./../../types"
-import { UPDATES_STATES } from "./../../constants"
+import { DialogState } from "./../../types"
+import { DIALOG_STATES } from "./../../constants"
 import "./updates.css"
 
 interface UpdatesProps {
-  updates: UpdatesState
-  setUpdates: Dispatch<SetStateAction<UpdatesState>>
+  updates: DialogState
+  setUpdates: Dispatch<SetStateAction<DialogState>>
 }
 
 export const Updates: React.FC<UpdatesProps> = ({ updates, setUpdates }) => {
@@ -37,13 +37,13 @@ export const Updates: React.FC<UpdatesProps> = ({ updates, setUpdates }) => {
   }, [])
 
   const onHide = () => {
-    setUpdates(UPDATES_STATES.HIDDEN)
+    setUpdates(DIALOG_STATES.HIDDEN)
   }
 
   return (
     <div
       className={`updates-dialog ${
-        updates === UPDATES_STATES.HIDDEN ? "hidden" : ""
+        updates === DIALOG_STATES.HIDDEN ? "hidden" : ""
       } fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50`}
     >
       <section className="relative bg-white rounded-lg shadow-xl max-w-2xl w-11/12 md:w-3/4 p-6 m-4 max-h-[90vh] overflow-y-auto">

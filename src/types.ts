@@ -32,14 +32,12 @@ export interface GameState {
 }
 
 // Misc Types
+// State for dialog modal/overlay
+// - hidden: Dialog are not visible
+// - shown: Dialog are visible to player
+export type DialogState = "hidden" | "shown"
 
 // State for instructions modal/overlay
 // - hidden: Instructions are not visible
 // - shown: Instructions are visible to player
-export type InstructionsState = "hidden" | "shown"
 export type Languages = "en" | "zh-sg" | "ms" | "ta"
-
-// State for updates modal/overlay
-// - hidden: updates are not visible
-// - shown: updates are visible to player
-export type UpdatesState = "hidden" | "shown"

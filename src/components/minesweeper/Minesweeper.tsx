@@ -2,34 +2,25 @@ import React, { useState } from "react"
 import { Board } from "./../board/Board"
 import { Instructions } from "../instructions/Instructions"
 import { Updates } from "../updates/Updates"
-import {
-  InstructionsState as InstructionsStateType,
-  UpdatesState as UpdatesStateType,
-} from "./../../types"
+import { DialogState as DialogStateType } from "./../../types"
 import { useGame } from "./../../hooks/useGame"
-import {
-  GAME_CONFIG,
-  INSTRUCTIONS_STATES,
-  UPDATES_STATES,
-} from "./../../constants"
+import { GAME_CONFIG, DIALOG_STATES } from "./../../constants"
 
 export const Minesweeper: React.FC = () => {
   const { board, gameOver, revealCell, toggleFlag, resetGame } =
     useGame(GAME_CONFIG)
   const [placeFlag, setPlaceFlag] = useState(false)
-  const [instructions, setInstructions] = useState<InstructionsStateType>(
-    INSTRUCTIONS_STATES.SHOWN
+  const [instructions, setInstructions] = useState<DialogStateType>(
+    DIALOG_STATES.SHOWN
   )
-  const [updates, setUpdates] = useState<UpdatesStateType>(
-    UPDATES_STATES.HIDDEN
-  )
+  const [updates, setUpdates] = useState<DialogStateType>(DIALOG_STATES.HIDDEN)
 
   const onInstructionsShow = () => {
-    setInstructions(INSTRUCTIONS_STATES.SHOWN)
+    setInstructions(DIALOG_STATES.SHOWN)
   }
 
   const onUpdatesShow = () => {
-    setUpdates(UPDATES_STATES.SHOWN)
+    setUpdates(DIALOG_STATES.SHOWN)
   }
 
   const onPlaceFlagToggle = () => {

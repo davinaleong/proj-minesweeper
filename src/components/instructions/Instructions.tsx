@@ -1,12 +1,12 @@
 import React, { useEffect, useState, Dispatch, SetStateAction } from "react"
 import ReactMarkdown from "react-markdown"
-import { InstructionsState, Languages as LanguagesType } from "./../../types"
-import { INSTRUCTIONS_STATES, LANGUAGES } from "./../../constants"
+import { DialogState, Languages as LanguagesType } from "./../../types"
+import { DIALOG_STATES, LANGUAGES } from "./../../constants"
 import "./instructions.css"
 
 interface InstructionsProps {
-  instructions: InstructionsState
-  setInstructions: Dispatch<SetStateAction<InstructionsState>>
+  instructions: DialogState
+  setInstructions: Dispatch<SetStateAction<DialogState>>
 }
 
 export const Instructions: React.FC<InstructionsProps> = ({
@@ -122,7 +122,7 @@ export const Instructions: React.FC<InstructionsProps> = ({
   }, [])
 
   const onHide = () => {
-    setInstructions(INSTRUCTIONS_STATES.HIDDEN)
+    setInstructions(DIALOG_STATES.HIDDEN)
   }
 
   const onEnglish = () => {
@@ -144,7 +144,7 @@ export const Instructions: React.FC<InstructionsProps> = ({
   return (
     <div
       className={`instructions-dialog ${
-        instructions === INSTRUCTIONS_STATES.HIDDEN ? "hidden" : ""
+        instructions === DIALOG_STATES.HIDDEN ? "hidden" : ""
       } fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50`}
     >
       <section className="relative bg-white rounded-lg shadow-xl max-w-2xl w-11/12 md:w-3/4 p-3 m-4 max-h-[90vh] overflow-y-auto">

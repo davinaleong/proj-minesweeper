@@ -17,7 +17,7 @@ export const Lost: React.FC<LostProps> = ({ resetGame }) => (
 
       <div className="text-center flow">
         <h2 className="text-2xl font-bold text-slate-700">
-          Oh oh... You Lost!
+          Oh, no... You Lost!
         </h2>
 
         <div className="text-5xl">😭</div>

@@ -109,8 +109,8 @@ export const Minesweeper: React.FC = () => {
         setInstructions={setInstructions}
       />
       <Updates updates={updates} setUpdates={setUpdates} />
-      {<Lost resetGame={resetGame} />}
-      {<Won resetGame={resetGame} />}
+      {gameOver && <Lost resetGame={resetGame} />}
+      {gameWon && <Won resetGame={resetGame} />}
     </main>
   )
 }

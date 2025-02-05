@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react"
 import ReactMarkdown from "react-markdown"
-import { InstructionStates } from "./../../types"
+import { InstructionsState } from "./../../types"
 import { INSTRUCTIONS_STATES } from "./../../constants"
 import "./instructions.css"
 
 interface InstructionsProps {
-  instructions: InstructionStates
-  setInstructions: React.FC<InstructionStates>
+  instructions: InstructionsState
+  setInstructions: React.FC<InstructionsState>
 }
 
 export const Instructions: React.FC<InstructionsProps> = ({
   instructions,
   setInstructions,
 }) => {
-  //const [state, setState] = useState(INSTRUCTIONS_STATES.SHOWN)
   const [markdown, setMarkdown] = useState<string>("")
   const [error, setError] = useState<string>("")
 

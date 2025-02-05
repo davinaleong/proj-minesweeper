@@ -1,8 +1,12 @@
-### 3th Feburary 2025
+### v1.0.0 - 3th Feburary 2025
 
-    1. First version of Dav/Minesweeper released!
+    1. v1.0.0 of Dav/Minesweeper released!
 
-### 4th Feburary 2025
+### v1.0.1 - 4th Feburary 2025
 
     1. Converted the Instructions into a popup.
     2. Added an "Updates" popup.
+
+### v1.0.2 - 5th Feburary 2025
+
+    1. Added a "How to Play" button.

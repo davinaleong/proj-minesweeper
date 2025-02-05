@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react"
 import ReactMarkdown from "react-markdown"
+import { InstructionStates } from "./../../types"
 import { INSTRUCTIONS_STATES } from "./../../constants"
 import "./instructions.css"
 
-export const Instructions: React.FC = () => {
-  const [state, setState] = useState(INSTRUCTIONS_STATES.SHOWN)
+interface InstructionsProps {
+  instructions: InstructionStates
+  setInstructions: React.FC<InstructionStates>
+}
+
+export const Instructions: React.FC<InstructionsProps> = ({
+  instructions,
+  setInstructions,
+}) => {
+  //const [state, setState] = useState(INSTRUCTIONS_STATES.SHOWN)
   const [markdown, setMarkdown] = useState<string>("")
   const [error, setError] = useState<string>("")
 
@@ -34,13 +43,13 @@ export const Instructions: React.FC = () => {
   }, [])
 
   const onHide = () => {
-    setState(INSTRUCTIONS_STATES.HIDDEN)
+    setInstructions(INSTRUCTIONS_STATES.HIDDEN)
   }
 
   return (
     <div
       className={`instructions-dialog ${
-        state === INSTRUCTIONS_STATES.HIDDEN ? "hidden" : ""
+        instructions === INSTRUCTIONS_STATES.HIDDEN ? "hidden" : ""
       } fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50`}
     >
       <section className="relative bg-white rounded-lg shadow-xl max-w-2xl w-11/12 md:w-3/4 p-6 m-4 max-h-[90vh] overflow-y-auto">

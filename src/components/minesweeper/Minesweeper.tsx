@@ -2,18 +2,27 @@ import React, { useEffect, useState } from "react"
 import { Board } from "./../board/Board"
 import { Instructions } from "../instructions/Instructions"
 import { useGame } from "./../../hooks/useGame"
-import { GAME_CONFIG, UPDATES_STATES } from "./../../constants"
+import {
+  GAME_CONFIG,
+  INSTRUCTIONS_STATES,
+  UPDATES_STATES,
+} from "./../../constants"
 
 export const Minesweeper: React.FC = () => {
   const { board, gameOver, revealCell, toggleFlag, resetGame } =
     useGame(GAME_CONFIG)
+  const [instructions, setInstructions] = useState(INSTRUCTIONS_STATES.SHOWN)
   const [updates, setUpdates] = useState(UPDATES_STATES.HIDDEN)
+
+  const onInstructionsShow = () => {
+    setInstructions(INSTRUCTIONS_STATES.SHOWN)
+  }
 
   const onUpdatesShow = () => {
     setUpdates(UPDATES_STATES.SHOWN)
   }
 
-  const onHide = () => {
+  const onUpdatesHide = () => {
     setUpdates(UPDATES_STATES.HIDDEN)
   }
 
@@ -27,7 +36,10 @@ export const Minesweeper: React.FC = () => {
       </header>
 
       <div className="game-status text-center my-4">
-        <Instructions />
+        <Instructions
+          instructions={instructions}
+          setInstructions={setInstructions}
+        />
 
         {!gameOver ? (
           <div className="text-4xl">😀</div>
@@ -47,10 +59,17 @@ export const Minesweeper: React.FC = () => {
       <Board board={board} onReveal={revealCell} onFlag={toggleFlag} />
 
       <footer className="main__footer | mt-8 flow">
-        <p className="text-center text-sm">
+        <p className="flex align-middle justify-center gap-3">
           <button
             type="button"
-            className="text-blue-500 hover:text-blue-600"
+            className="p-2 text-white bg-blue-500 hover:bg-blue-600 rounded"
+            onClick={onInstructionsShow}
+          >
+            How to Play
+          </button>
+          <button
+            type="button"
+            className="p-2 text-white bg-slate-500 hover:bg-slate-600 rounded"
             onClick={onUpdatesShow}
           >
             Updates
@@ -76,7 +95,7 @@ export const Minesweeper: React.FC = () => {
           <button
             type="button"
             className="sticky top-0 float-right text-red-700 hover:text-red-900 transition-colors text-6xl"
-            onClick={onHide} // Attach the onHide function to the button click
+            onClick={onUpdatesHide} // Attach the onHide function to the button click
           >
             &times;
           </button>

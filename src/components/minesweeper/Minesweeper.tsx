@@ -41,45 +41,45 @@ export const Minesweeper: React.FC = () => {
       </header>
 
       <div className="game-status text-center my-4">
-        <Instructions
-          instructions={instructions}
-          setInstructions={setInstructions}
-        />
-
         {!gameOver ? (
           <div className="text-4xl">😀</div>
         ) : (
           <div className="text-center">
             <div className="text-4xl">😭</div>
-            <button
-              className="mt-2 px-4 py-2 text-semibold bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-              onClick={resetGame}
-            >
-              New Game
-            </button>
           </div>
+        )}
+      </div>
+
+      <div className="flex align-middle justify-center gap-3">
+        <button
+          type="button"
+          className="px-4 py-2 text-white text-semibold bg-blue-500 hover:bg-blue-600 rounded transition-colors"
+          onClick={onInstructionsShow}
+        >
+          How to Play
+        </button>
+        <button
+          type="button"
+          className="px-4 py-2 text-white text-semibold bg-slate-500 hover:bg-slate-600 rounded transition-colors"
+          onClick={onUpdatesShow}
+        >
+          Updates
+        </button>
+        {gameOver ? (
+          <button
+            className="px-4 py-2 text-semibold bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
+            onClick={resetGame}
+          >
+            New Game
+          </button>
+        ) : (
+          <></>
         )}
       </div>
 
       <Board board={board} onReveal={revealCell} onFlag={toggleFlag} />
 
       <footer className="main__footer | mt-8 flow">
-        <p className="flex align-middle justify-center gap-3">
-          <button
-            type="button"
-            className="p-2 text-white bg-blue-500 hover:bg-blue-600 rounded"
-            onClick={onInstructionsShow}
-          >
-            How to Play
-          </button>
-          <button
-            type="button"
-            className="p-2 text-white bg-slate-500 hover:bg-slate-600 rounded"
-            onClick={onUpdatesShow}
-          >
-            Updates
-          </button>
-        </p>
         <p className="text-center text-sm text-gray-500">
           Dav/Minesweeper by{" "}
           <a
@@ -91,6 +91,10 @@ export const Minesweeper: React.FC = () => {
         </p>
       </footer>
 
+      <Instructions
+        instructions={instructions}
+        setInstructions={setInstructions}
+      />
       <Updates updates={updates} setUpdates={setUpdates} />
     </main>
   )

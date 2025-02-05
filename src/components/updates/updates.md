@@ -11,7 +11,8 @@
 
     1. Added a "How to Play" button.
     2. Added "How to Play" in Simplified Chinese, Malay, and Tamil.
-    3. Fixed build errors
+    3. Fixed build errors.
+    4. Placed all buttons together and colour-coded them.
 
 ---
 

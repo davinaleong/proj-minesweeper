@@ -21,6 +21,22 @@ export const INSTRUCTIONS_STATES = {
   SHOWN: "shown" as const, // Instructions are being displayed
 }
 
+// Define supported language codes as a TypeScript constant object
+// Each language is mapped to its ISO language code
+export const LANGUAGES = {
+  // English - Standard English
+  ENGLISH: "en" as const,
+
+  // Chinese - Singapore variant of Chinese
+  CHINESE: "zh-sg" as const,
+
+  // Malay - Standard Malay
+  MALAY: "ms" as const,
+
+  // Tamil - Standard Tamil
+  TAMIL: "ta" as const,
+}
+
 // States for the updates modal/overlay
 export const UPDATES_STATES = {
   HIDDEN: "hidden" as const, // Updates are not visible

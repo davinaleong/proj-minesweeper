@@ -157,6 +157,10 @@ body {
   max-width: calc(var(--wrapper-width) - (var(--spacing-3) * 2));
 }
 
+.backdrop {
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+
 button {
   cursor: pointer;
 }

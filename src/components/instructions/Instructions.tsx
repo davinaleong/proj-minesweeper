@@ -145,9 +145,9 @@ export const Instructions: React.FC<InstructionsProps> = ({
     <div
       className={`instructions-dialog ${
         instructions === DIALOG_STATES.HIDDEN ? "hidden" : ""
-      } fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50`}
+      } fixed inset-0 flex items-center justify-center z-50 backdrop`}
     >
-      <section className="relative bg-white rounded-lg shadow-xl max-w-2xl w-11/12 md:w-3/4 p-3 m-4 max-h-[90vh] overflow-y-auto">
+      <section className="relative bg-white rounded-lg max-w-2xl w-11/12 md:w-3/4 p-3 m-4 max-h-[90vh] overflow-y-auto">
         <button
           type="button"
           className="sticky top-0 float-right text-red-700 hover:text-red-900 transition-colors text-6xl"

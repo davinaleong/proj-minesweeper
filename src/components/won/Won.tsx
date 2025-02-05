@@ -1,12 +1,12 @@
 import React from "react"
 
-interface WinProps {
+interface WonProps {
   resetGame: () => void
 }
 
-export const Win: React.FC<WinProps> = ({ resetGame }) => (
-  <div className="win-dialog fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <section className="relative bg-white rounded-lg shadow-xl w-md p-6 m-4">
+export const Won: React.FC<WonProps> = ({ resetGame }) => (
+  <div className="won-dialog fixed inset-0 flex items-center justify-center z-50 backdrop">
+    <section className="relative bg-white rounded-lg w-md p-6 m-4">
       <button
         type="button"
         className="sticky top-0 float-right text-red-700 hover:text-red-900 transition-colors text-6xl"

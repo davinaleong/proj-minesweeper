@@ -2,7 +2,8 @@ import React, { useState } from "react"
 import { Board } from "./../board/Board"
 import { Instructions } from "./../instructions/Instructions"
 import { Updates } from "./../updates/Updates"
-import { Win } from "./../win/Win"
+import { Lost } from "../lost/Lost"
+import { Won } from "../won/Won"
 import { DialogState as DialogStateType } from "./../../types"
 import { useGame } from "./../../hooks/useGame"
 import { GAME_CONFIG, DIALOG_STATES } from "./../../constants"
@@ -108,7 +109,8 @@ export const Minesweeper: React.FC = () => {
         setInstructions={setInstructions}
       />
       <Updates updates={updates} setUpdates={setUpdates} />
-      {gameWon && <Win resetGame={resetGame} />}
+      {<Lost resetGame={resetGame} />}
+      {<Won resetGame={resetGame} />}
     </main>
   )
 }

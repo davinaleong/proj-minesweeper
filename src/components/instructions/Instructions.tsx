@@ -156,7 +156,9 @@ export const Instructions: React.FC<InstructionsProps> = ({
           &times;
         </button>
 
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">How to Play</h2>
+        <h2 className="text-2xl text-center font-bold text-gray-900 mb-6">
+          How to Play
+        </h2>
 
         <div className="flex align-center justify-center gap-1">
           <button

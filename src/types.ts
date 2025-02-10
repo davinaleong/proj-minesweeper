@@ -22,6 +22,7 @@ export type Board = CellData[][]
 export interface GameConfig {
   BOARD_SIZE: number // Width/height of the board (square)
   MINES_COUNT: number // Total number of mines to place
+  MINES_TO_SURVIVE: number // Specifies how many successful moves needed before board changes
 }
 
 // Complete game state including board and game status

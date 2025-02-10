@@ -10,16 +10,18 @@ import {
 export const useGame = (config: GameConfig) => {
   const survivedMines = useRef(0)
   const lastBoard = useRef<Board | null>(null)
+  const originalBoard = useRef<Board | null>(null)
 
   const initializeBoard = (): Board => {
     if (lastBoard.current && survivedMines.current < config.MINES_TO_SURVIVE) {
-      return lastBoard.current
+      return JSON.parse(JSON.stringify(originalBoard.current))
     }
 
     let board = createEmptyBoard(config)
     board = placeMines(board, config)
     board = calculateNeighborMines(board, config)
     lastBoard.current = board
+    originalBoard.current = JSON.parse(JSON.stringify(board))
     return board
   }
 
@@ -60,7 +62,6 @@ export const useGame = (config: GameConfig) => {
         }
 
         if (newBoard[y][x].isMine) {
-          survivedMines.current = 0
           for (let ry = 0; ry < config.BOARD_SIZE; ry++) {
             for (let rx = 0; rx < config.BOARD_SIZE; rx++) {
               if (newBoard[ry][rx].isMine) {
@@ -100,14 +101,19 @@ export const useGame = (config: GameConfig) => {
   )
 
   const resetGame = useCallback(() => {
-    survivedMines.current = 0
-    lastBoard.current = null
+    if (gameState.gameOver) {
+      if (survivedMines.current >= config.MINES_TO_SURVIVE) {
+        survivedMines.current = 0
+        lastBoard.current = null
+        originalBoard.current = null
+      }
+    }
     setGameState({
       board: initializeBoard(),
       gameOver: false,
       gameWon: false,
     })
-  }, [])
+  }, [gameState.gameOver])
 
   return {
     board: gameState.board,

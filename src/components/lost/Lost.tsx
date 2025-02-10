@@ -27,7 +27,7 @@ export const Lost: React.FC<LostProps> = ({ resetGame }) => (
             className="px-4 py-2 text-bold bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
             onClick={resetGame}
           >
-            New Game
+            Restart
           </button>
         </div>
       </div>

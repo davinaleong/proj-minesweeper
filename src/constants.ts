@@ -5,6 +5,7 @@ import { GameConfig } from "./types"
 export const GAME_CONFIG: GameConfig = {
   BOARD_SIZE: 10, // Creates a 10x10 grid
   MINES_COUNT: 10, // Places 10 mines on the board
+  MINES_TO_SURVIVE: 10, // Specifies successful moves needed before the board changes
 }
 
 // Possible states for each cell on the board

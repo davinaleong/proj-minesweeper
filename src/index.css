@@ -125,7 +125,7 @@
     var(--clr-cell-flagged-border);
 
   --clr-cell-flagged-yes: var(--clr-primary-700);
-  --clr-cell-flagged-yes-bg: var(--clr-warning-200);
+  --clr-cell-flagged-yes-bg: var(--clr-warning-700);
   --clr-cell-flagged-yes-border: var(--clr-secondary-300);
   --cell-flagged-yes-border: var(--cell-border-width)
     var(--cell-border-style-yes) var(--clr-cell-flagged-yes-border);
